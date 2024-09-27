@@ -42,8 +42,8 @@ export default {
       "@eventcatalog/generator-openapi",
       {
         services: [
-          { path: path.join(__dirname, "openapi-files", "order-api.yml") },
-          { path: path.join(__dirname, "openapi-files", "order-history.yml") },
+          { path: path.join(__dirname, "openapi-files", "order-api.yml"), id: 'order-service' },
+          { path: path.join(__dirname, "openapi-files", "order-history.yml"), id: 'order-history' },
         ],
         domain: {
           id: "order-management",
@@ -56,7 +56,7 @@ export default {
       "@eventcatalog/generator-openapi",
       {
         services: [
-          { path: path.join(__dirname, "openapi-files", "payment-api.yml") },
+          { path: path.join(__dirname, "openapi-files", "payment-api.yml"), id: 'payment-service' },
         ],
         domain: { id: "payment", name: "Payment", version: "0.0.1" },
       },
